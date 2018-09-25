@@ -1,0 +1,100 @@
+#include "pch.h"
+#include <iostream>
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+
+
+
+int main()
+{
+	const int base = 10;
+	int extrafee; 
+	double checks, checkfees, balance, total;
+
+
+	cout << "Please enter your beginning balance: $";
+	cin >> balance;
+
+	cout << "Please enter the total number of checks written: ";
+	cin >> checks;
+
+	// Calculating extra fee
+
+	if (balance < 0)
+	{
+		cout << "URGENT! YOUR BALANCE INDICATES THE ACCOUNT HAS BEEN OVERDRAWN" << endl;
+	}
+	else
+	{
+		if (balance < 400)
+		{
+			extrafee = 15;
+		}
+		else
+		{
+			if (balance >= 400)
+			{
+				extrafee = 0;
+			}
+		}
+	}
+
+
+	// Calculating check fees
+
+
+	if (checks < 20)
+	{
+		checkfees = checks * 0.1;
+	}
+
+	else 
+		{
+			if (checks >= 20 && checks <= 39)
+			{
+
+				checkfees = checks * 0.08;
+			}
+			else
+			{
+
+				if (checks >= 40 && checks <= 59)
+				{
+					checkfees = checks * 0.06;
+				}
+				else
+				{
+					if (checks >= 60)
+					{
+						checkfees = checks * 0.04;
+
+					}
+				}
+			}
+		}
+
+	// Calculate Total
+
+	total = base + extrafee + checkfees;
+
+
+	// Outputs
+
+	cout << "-----------------------------" << endl;
+	cout << "Monthly Bank Service Fees Due" << endl;
+	cout << "-----------------------------" << endl;
+	cout << "Check Fees: $" << checkfees << endl;
+	cout << "Account Service Fee: $" << extrafee << endl;
+	cout << "Total amount due: $" << total << endl;
+
+
+
+
+
+	return 0;
+
+}
