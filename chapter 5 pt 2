@@ -15,14 +15,14 @@ int main()
 	double totalInterest = 0; // Total interest earned
 	int months; // Number of months passed
 
-	//   TODO: Set up the output formatting.
+	// Set up the output formatting.
 
 
-	// DONE: Get the annual interest rate.
+	// Get the annual interest rate.
 	cout << "Enter the annual interest rate " << "on the account (e.g. .04): ";
 	cin >> yrInterestRate;
 
-	// DONE: Validate the interest rate - Interest rate must be non-negative
+	// Validate the interest rate - Interest rate must be non-negative
 
 	while (yrInterestRate < 0)
 	{
@@ -33,11 +33,11 @@ int main()
 		cin >> yrInterestRate;
 	}
 
-	// DONE: Get the starting balance.
+	// Get the starting balance.
 	cout << "Enter the starting balance: ";
 	cin >> balance;
 
-	// DONE: Validate the starting balance - The balance must be greater than 0
+	// Validate the starting balance - The balance must be greater than 0
 
 	while (balance < 0)
 	{
@@ -48,11 +48,11 @@ int main()
 		cin >> balance; 
 	}
 
-	// DONE: Get the number of months that the account has been open.
+	// Get the number of months that the account has been open.
 	cout << "Enter the number of months the account has been open: ";
 	cin >> months;
 
-	// DONE: Validate the number of months - Number of months must be non-negative
+	// Validate the number of months - Number of months must be non-negative
 
 	while (months < 1)
 	{
@@ -63,21 +63,21 @@ int main()
 		cin >> months; 
 	}
 
-	// TODO: Calculate the monthly interest rate.
+	// Calculate the monthly interest rate.
 
 	moInterestRate = (yrInterestRate) / 12;
 
-	// TODO: Process the transactions.
+	// Process the transactions.
 	for (int count = 1; count <= months; count++)
 	{
-		// TODO: Display the month number.
+		// Display the month number.
 		cout << "Month: " << count << endl;
 
-		// TODO: Input the amount deposited this month.
+		// Input the amount deposited this month.
 		cout << "Please enter the amount deposited this month: ";
 		cin >> deposited; 
 
-		// TODO: Validate the amount deposited this month - Deposits must be zero or greater.
+		// Validate the amount deposited this month - Deposits must be zero or greater.
 		while (deposited < 0)
 		{
 			cout << "---------------------------------------" << endl;
@@ -88,12 +88,12 @@ int main()
 		}
 
 
-		// TODO: Input the amount withdrawn this month- Total withdrawals for this month
+		// Input the amount withdrawn this month- Total withdrawals for this month
 		cout << "Please enter the amount withdrawn this month: ";
 		cin >> withDrawn;
 		totalWithdrawals += withDrawn;
 
-		// TODO: Validate the amount withdrawn this month.
+		// Validate the amount withdrawn this month.
 		while (withDrawn < 0)
 		{
 			cout << "--------------------------------------------------" << endl;
@@ -104,13 +104,13 @@ int main()
 		}
 
 		// Calculate the totals.
-		// TODO: Add deposits to balance
+		// Add deposits to balance
 		balance += deposited;
-		// TODO: Total of deposits
+		// Total of deposits
 		totalDeposits += deposited;
-		// TODO: Subtract withdrawals from balance
+		// Subtract withdrawals from balance
 		balance -= withDrawn;
-		// TODO: Total of withdrawals
+		// Total of withdrawals
 		totalWithdrawals += withDrawn;
 
 		// Determine if we have a negative balance.
@@ -122,11 +122,11 @@ int main()
 			break; // Break out of loop! The account is closed.
 		}
 
-		// TODO: Calculate the monthly interest paid.
+		// Calculate the monthly interest paid.
 		moIntPaid = balance * moInterestRate;
-		// TODO: Accumulate the total interest.
+		// Accumulate the total interest.
 		totalInterest += moIntPaid;
-		// TODO: Add the interest to the balance.
+		// Add the interest to the balance.
 		balance += moIntPaid;
 		
 		
