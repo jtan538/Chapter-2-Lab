@@ -15,8 +15,6 @@ int main()
 	double totalInterest = 0; // Total interest earned
 	int months; // Number of months passed
 
-	// Set up the output formatting.
-
 
 	// Get the annual interest rate.
 	cout << "Enter the annual interest rate " << "on the account (e.g. .04): ";
