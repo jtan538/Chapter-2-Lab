@@ -89,7 +89,6 @@ int main()
 		// Input the amount withdrawn this month- Total withdrawals for this month
 		cout << "Please enter the amount withdrawn this month: ";
 		cin >> withDrawn;
-		totalWithdrawals += withDrawn;
 
 		// Validate the amount withdrawn this month.
 		while (withDrawn < 0)
